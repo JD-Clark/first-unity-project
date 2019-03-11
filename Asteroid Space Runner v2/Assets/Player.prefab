@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5672353753815273771}
   - component: {fileID: 5672353753815273764}
   m_Layer: 0
-  m_Name: Player 1
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,7 +99,9 @@ MonoBehaviour:
   maxHeight: 4
   minHeight: -4
   health: 3
+  shipStatus: {fileID: 0}
   effect: {fileID: 5936168200835077212, guid: 179b33d6b654591469cc01c1a9c7d1eb, type: 3}
+  gameOver: {fileID: 0}
 --- !u!61 &5672353753815273771
 BoxCollider2D:
   m_ObjectHideFlags: 0
