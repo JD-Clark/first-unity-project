@@ -4,6 +4,6 @@ All the assets used were found on the Unity Asset store and were free. I followe
 
 -Sometimes my particle effects don't appear on collision usually when the background begins repeating... [FIXED]
 
--Still need to add audio
+-Still need to add audio [DONE]
 
 -Adding smoother movements between keydown events.
