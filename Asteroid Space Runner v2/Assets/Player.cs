@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     public GameObject gameOver;
 
 
+
     private void Update()
     {
         
@@ -45,16 +46,22 @@ public class Player : MonoBehaviour
             transform.position = targetPos;
         }
 
-        if (health == 3)
+   
+        switch (health)
         {
-            shipStatus.text = "Status: Normal";
+            case 1:
+                shipStatus.text = "Status: Critical!";
+                break;
+            case 2:
+                shipStatus.text = "Status: Damaged";
+                break;
+            case 3:
+                shipStatus.text = "Status: Normal";
+                break;
+            default:
+                shipStatus.text = "Status: N/A";
+                break;
         }
-        else if (health == 2)
-        {
-            shipStatus.text = "Status: Damaged";
-        }
-        else
-            shipStatus.text = "Status: Critical!";
     }
 
   
