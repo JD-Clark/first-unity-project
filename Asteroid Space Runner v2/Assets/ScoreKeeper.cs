@@ -7,6 +7,12 @@ public class ScoreKeeper : MonoBehaviour
 {
     int score;
     public Text scoreDisplay;
+    public Text highScore;
+
+    void Start()
+    {
+        highScore.text = "HIGH SCORE: " + PlayerPrefs.GetInt("hScore", 0).ToString();
+    }
 
     private void Update()
     {
@@ -19,6 +25,12 @@ public class ScoreKeeper : MonoBehaviour
         {
             score++;
             Debug.Log(score);
+            if (score > PlayerPrefs.GetInt("hScore", 0))
+            {
+                PlayerPrefs.SetInt("hScore", score);
+                highScore.text = "HIGH SCORE: " + score.ToString();
+            }
         }
+
     }
 }
